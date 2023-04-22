@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Findex\OnboardingCard\OnboardingCard;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
@@ -26,9 +27,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -66,7 +67,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function tools()
     {
-        return [];
+        return [
+           // new \Findex\Onboarding\Onboarding,
+        ];
     }
 
     /**
@@ -77,5 +80,13 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function register()
     {
         //
+    }
+
+    public function cards()
+    {
+        return [
+            // ...
+            new OnboardingCard()
+        ];
     }
 }

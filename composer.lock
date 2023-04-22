@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0fdfc7c0adccf730609ea30bd40a7ed",
+    "content-hash": "2e6ca5432aab7fcbf7ffd2b033193d82",
     "packages": [
         {
             "name": "brick/math",
@@ -828,6 +828,78 @@
                 }
             ],
             "time": "2023-01-14T14:17:03+00:00"
+        },
+        {
+            "name": "findex/onboarding",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Onboarding",
+                "reference": "fe6e708a6dc09f2a4411e53487e21275284c1e62"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Findex\\Onboarding\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Findex\\Onboarding\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "findex/onboardingcard",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/Onboardingcard",
+                "reference": "e6147eb36e40c3217d61f05a83e73d317c2e3332"
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Findex\\Onboardingcard\\CardServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Findex\\Onboardingcard\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova card.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "fruitcake/php-cors",
@@ -8824,7 +8896,10 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "findex/onboarding": 20,
+        "findex/onboardingcard": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

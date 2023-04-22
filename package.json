@@ -2,7 +2,15 @@
     "private": true,
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "build-onboarding": "cd nova-components/Onboarding && npm run dev",
+        "build-onboarding-prod": "cd nova-components/Onboarding && npm run prod",
+        "build-onboardingCard": "cd nova-components/OnboardingCard && npm run dev",
+        "build-onboardingCard-prod": "cd nova-components/OnboardingCard && npm run prod",
+        "build-onboardingcard": "cd nova-components/Onboardingcard && npm run dev",
+        "build-onboardingcard-prod": "cd nova-components/Onboardingcard && npm run prod",
+        "build-skiponboardingcard": "cd nova-components/Skiponboardingcard && npm run dev",
+        "build-skiponboardingcard-prod": "cd nova-components/Skiponboardingcard && npm run prod"
     },
     "devDependencies": {
         "axios": "^1.1.2",

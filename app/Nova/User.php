@@ -2,6 +2,8 @@
 
 namespace App\Nova;
 
+use Findex\Onboarding\Onboarding;
+use Findex\Onboardingcard\Onboardingcard;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules;
 use Laravel\Nova\Fields\Gravatar;
@@ -73,9 +75,20 @@ class User extends Resource
      */
     public function cards(NovaRequest $request)
     {
-        return [];
+        return [
+            new Onboardingcard(),
+        ];
     }
 
+    /**
+     * 
+     */
+    public function availableTools(Request $request)
+    {
+        return [
+            new Onboarding,
+        ];
+    }
     /**
      * Get the filters available for the resource.
      *
