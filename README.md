@@ -17,6 +17,7 @@ Principalmente la del componente llamado **Onboardingcard**.
 
 Se hizo un cambio en el enfoque, ya que no me parecio apropiado usar una **Nova Tool** para definir el proceso de onboarding,en cambio se hizo la implementacion mediante el uso de una **Card**. El funcionamiento es el mismo pero me parecio mucho mas intuitivo.
 
+![](https://github.com/kevin-Oz/laravel-nova-test/blob/master/onboarding.gif) 
 
 Usuario principal para hacer login en el dashboard:
 
